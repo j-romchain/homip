@@ -1,0 +1,16 @@
+{
+  "name": "shadowsocks-heroku",
+  "description": "https://github.com/0polar/shadowsocks-heroku",
+  "env": {
+    "METHOD": {
+      "description": "cipher",
+      "value": "",
+      "required": false
+    },
+    "KEY": {
+      "description": "password",
+      "value": "",
+      "required": false
+    }
+  }
+}
