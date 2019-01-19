@@ -1,75 +1,35 @@
-shadowsocks-heroku
-==================
+# shadowsocks-heroku
 
-shadowsocks-heroku is a lightweight tunnel proxy which can help you get through firewalls. It is a port of [shadowsocks](https://github.com/clowwindy/shadowsocks), but through a different protocol.
+shadowsocks-heroku is a lightweight tunnel proxy which can help you get through firewalls.
 
+It is a port of [shadowsocks](https://github.com/clowwindy/shadowsocks), but through a different protocol.  
 shadowsocks-heroku uses WebSocket instead of raw sockets, so it can be deployed on [Heroku](https://www.heroku.com/).
 
-Notice that the protocol is INCOMPATIBLE with the origin shadowsocks.
+Notice: this protocol is **INCOMPATIBLE** with the origin shadowsocks.
 
-Heroku
-------
 
-### Usage
+## How to use
 
-```
-$ heroku create
-Creating still-tor-8707... done, stack is cedar-14
-http://still-tor-8707.herokuapp.com/ | git@heroku.com:still-tor-8707.git
-```
+1. [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/0polar/shadowsocks-heroku/tree/master) (`cipher` and `password` are not required since use TLS for default encryption)
 
-Push the code to Heroku.
+2. [Download](https://github.com/0polar/shadowsocks-heroku/archive/master.zip) and unzip this repository, and go to the folder
 
-```
-$ git push heroku master
-…
------> Compressing... done, 5.1MB
------> Launching... done, v3
-       http://still-tor-8707.herokuapp.com/ deployed to Heroku
+3. Install project dependencies with command `npm install`
 
-To git@heroku.com:still-tor-8707.git
- * [new branch]      master -> master
-```
+4. Edit `config.json` file, replace `<your_app_name>` to the prarmeter specified in step 1
 
-Set a few configs:
+5. Run `node local.js`
 
-```
-$ heroku config:set METHOD=rc4 KEY=foobar
-Setting config vars and restarting still-tor-8707... done, v11
-KEY:    foobar
-METHOD: rc4
-```
+6. Change proxy settings of your browser into `SOCKS5 127.0.0.1:1080`
 
-Install project dependencies with `npm install`:
 
-```
-$ npm install
-…
-```
+## Troubleshooting
 
-Then run:
+If there is something wrong, you can check the logs by:  
+[https://dashboard.heroku.com/apps/<your_app_name>/logs](https://dashboard.heroku.com/apps/<your_app_name>/logs)
 
-```
-$ node local.js -s still-tor-8707.herokuapp.com -l 1080 -m rc4 -k foobar -r 80
-server listening at { address: '127.0.0.1', family: 'IPv4', port: 1080 }
-```
 
-Change proxy settings of your browser into:
-
-```
-SOCKS5 127.0.0.1:1080
-```
-
-### Troubleshooting
-
-If there is something wrong, you can check the logs by:
-
-```
-$ heroku logs -t --app still-tor-8707
-```
-
-Supported Ciphers
------------------
+## Supported Ciphers
 
 - rc4
 - rc4-md5
