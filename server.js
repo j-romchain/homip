@@ -55,11 +55,11 @@ if (['', 'null', 'table'].includes(METHOD.toLowerCase())) {
 
 const server = http.createServer(function(clientRequest, clientResponse) {
   const options = {
-    hostname: 'www.ruanyifeng.com',
+    hostname: 'javascript-puzzlers.herokuapp.com',
     port: 80,
     path: clientRequest.url,
     method: clientRequest.method,
-    headers: Object.assign(clientRequest.headers, { host: 'www.example.com' })
+    headers: Object.assign(clientRequest.headers, { host: 'javascript-puzzlers.herokuapp.com' })
   };
   try {
     const initiation = http.request(options, function(response) {
