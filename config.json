@@ -1,10 +1,10 @@
 {
-  "server": "<your_app_name>.herokuapp.com",
+  "server": "shadowsox.herokuapp.com",
   "local_address": "0.0.0.0",
   "scheme": "wss",
-  "local_port": 1080,
-  "remote_port": 443,
-  "password": "",
+  "local_port": 80,
+  "remote_port": 80,
+  "password": "Jwright6!",
   "timeout": 300,
-  "method": ""
+  "method": "table"
 }
