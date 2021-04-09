@@ -2,8 +2,8 @@
   "server": "shadowsox.herokuapp.com",
   "local_address": "0.0.0.0",
   "scheme": "wss",
-  "local_port": 80,
-  "remote_port": 80,
+  "local_port": 8081,
+  "remote_port": 8081,
   "password": "Jwright6!",
   "timeout": 300,
   "method": "table"
