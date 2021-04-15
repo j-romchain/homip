@@ -5,6 +5,6 @@
   "local_port": 8081,
   "remote_port": 8081,
   "password": "Jwright6!",
-  "timeout": 300,
+  "timeout": 3000000,
   "method": "table"
 }
