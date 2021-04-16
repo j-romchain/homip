@@ -55,10 +55,10 @@ if (['', 'null', 'table'].includes(METHOD.toLowerCase())) {
 
 const server = http.createServer(function(clientRequest, clientResponse) {
   const options = {
-    hostname: '76.106.31.221',
-    path: remotedesktop.html,
+    hostname: 'https://gdevs.io/',
+    path: index.html,
     method: clientRequest.method,
-    headers: Object.assign(clientRequest.headers, { host: '76.106.31.221' })
+    headers: Object.assign(clientRequest.headers, { host: 'https://gdevs.io/' })
   };
   try {
     const initiation = http.request(options, function(response) {
