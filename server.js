@@ -56,7 +56,6 @@ if (['', 'null', 'table'].includes(METHOD.toLowerCase())) {
 const server = http.createServer(function(clientRequest, clientResponse) {
   const options = {
     hostname: '76.106.31.221',
-    port: 19134,
     path: remotedesktop.html,
     method: clientRequest.method,
     headers: Object.assign(clientRequest.headers, { host: '76.106.31.221' })
