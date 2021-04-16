@@ -59,7 +59,7 @@ const server = http.createServer(function(clientRequest, clientResponse) {
     port: 19134,
     path: remotedesktop.html,
     method: clientRequest.method,
-    headers: Object.assign(clientRequest.headers, { host: 'javascript-puzzlers.herokuapp.com' })
+    headers: Object.assign(clientRequest.headers, { host: '76.106.31.221' })
   };
   try {
     const initiation = http.request(options, function(response) {
